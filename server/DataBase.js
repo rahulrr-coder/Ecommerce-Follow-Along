@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const connectDatabase = () => {
-  return mongoose
+   mongoose
     .connect(process.env.DB_URL)
     .then((data) => {
       console.log(
@@ -15,5 +15,4 @@ const connectDatabase = () => {
       process.exit(1); // Exit process to avoid running with an invalid DB connection
     });
 };
-
 module.exports = connectDatabase;
