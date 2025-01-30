@@ -11,7 +11,7 @@ mongoose
     .catch((err) => {
       console.error(
         `Database connection failed: ${err.message}`
-      );
+      );a
       process.exit(1); // Exit process to avoid running with an invalid DB connection
     });
 };

@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const User = require("../models/User"); // Make sure the path is correct
+const User = require("../model/User"); // Make sure the path is correct
 const router = express.Router();
 const { upload } = require("../multer");
 const ErrorHandler = require("../utils/ErrorHandler");
