@@ -18,6 +18,8 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 }
 
 const user = require("./controllers/user");
+const productRoutes = require("./controllers/product")
+app.use("/api/products",productRoutes)
 app.use("/api/v2/user", user);
 
 // Middleware for Errors

@@ -79,3 +79,6 @@ We created a reusable product card component and designed a homepage to display 
 
 ## Milestone 9
 We created a product page for the e-commerce website. The page displays a list of products with their details, including images, names, descriptions, and prices. Users can click on a product to view more information or add it to their cart. This page provides a user-friendly interface for browsing and selecting products.
+
+## Milestone 10 
+We created an API to allow product creation with image uploads using Multer. The images are stored in the uploads/ directory, and product data, including image paths, is saved to MongoDB for efficient storage and retrieval.
