@@ -86,5 +86,5 @@ We created an API to allow product creation with image uploads using Multer. The
 ## Milestone 11
 We successfully fetched real-time product data from the backend and displayed it dynamically on the homepage. Additionally, we implemented an automatic image slider for each product, allowing multiple images to cycle every 3 seconds. This enhances user engagement and provides a more interactive browsing experience.
 
-## Milestone 12:
+## Milestone 12
 We implemented a ByProduct Page that displays products created by a specific email ID, while the Home Page continues to show all products.
