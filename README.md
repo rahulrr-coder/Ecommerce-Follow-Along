@@ -89,8 +89,11 @@ We successfully fetched real-time product data from the backend and displayed it
 ## Milestone 12
 We implemented a ByProduct Page that displays products created by a specific email ID, while the Home Page continues to show all products.
 
-## Milestone 13: 
+## Milestone 13
 We implemented the Update Product functionality, allowing users to edit product details. The update form dynamically loads the product's existing data, and changes are submitted via an API call. This ensures that users can modify product information easily while maintaining data integrity.
 
-## Milestone 14: 
+## Milestone 14 
 This milestone focused on integrating the Delete Product functionality, allowing users to remove products permanently. A confirmation prompt ensures accidental deletions are avoided
+
+## Milestone 15
+Implement a responsive navigation bar using React and Tailwind CSS to enable smooth navigation between different pages in the application.
