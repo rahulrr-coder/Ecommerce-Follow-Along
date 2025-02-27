@@ -135,4 +135,84 @@ router.delete("/:id", async (req, res) => {
     }
 });
 
+router.post("/cart", async (req, res) => {
+    try {
+        const { userId, productId, quantity } = req.body;
+        const email = userId; // ✅ Assign user email correctly
+
+        if (!email) {
+            return res.status(400).json({ message: "Email is required" });
+        }
+
+        if (!mongoose.Types.ObjectId.isValid(productId)) {
+            return res.status(400).json({ message: "Invalid productId" });
+        }
+
+        if (!quantity || quantity < 1) {
+            return res.status(400).json({ message: "Quantity must be at least 1" });
+        }
+
+        // ✅ Find the user correctly
+        const user = await User.findOne({ email });
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        // ✅ Ensure user has a cart array
+        if (!user.cart) {
+            user.cart = [];
+        }
+
+        // ✅ Find the product
+        const product = await Product.findById(productId);
+        if (!product) {
+            return res.status(404).json({ message: "Product not found" });
+        }
+
+        // ✅ Check if the product is already in the cart
+        const cartItemIndex = user.cart.findIndex(
+            (item) => item.productId.toString() === productId
+        );
+
+        if (cartItemIndex > -1) {
+            user.cart[cartItemIndex].quantity += quantity;
+        } else {
+            user.cart.push({ productId, quantity });
+        }
+
+        await user.save();
+
+        res.status(200).json({
+            message: "Cart updated successfully",
+            cart: user.cart,
+        });
+    } catch (error) {
+        console.error("Detailed server error:", error);
+        res.status(500).json({ message: "Server Error", error: error.message });
+    }
+});
+
+router.get('/cartproducts', async (req, res) => {
+    try {
+        const { email } = req.query;
+        if (!email) {
+            return res.status(400).json({ error: 'Email query parameter is required' });
+        }
+        const user = await User.findOne({ email }).populate({
+            path: 'cart.productid',
+            model: 'Product'
+        });
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+        res.status(200).json({
+            message: 'Cart retrieved successfully',
+            cart: user.cart
+        });
+    } catch (err) {
+        console.error('Server error:', err);
+        res.status(500).json({ error: 'Server Error' });
+    }
+});
+
 module.exports = router;

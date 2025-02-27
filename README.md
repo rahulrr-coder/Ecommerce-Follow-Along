@@ -103,3 +103,6 @@ We create a product details page displaying all product data, including descript
 
 ## Milestone 17
 We implemented the backend functionality to add products to a cart and store them in the database. This feature allows users to add products to their cart, which persists in the database for future access
+
+## Milestone 18
+we implemented the backend functionality to add products to the user's cart and store them in the database.
