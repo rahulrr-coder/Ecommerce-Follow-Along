@@ -1,12 +1,11 @@
 import React from 'react'
-import Signup from "../components/SignUp/SignIn.jsx"
-
-const SignUpPage = () => {
+import Signup from '../components/Signup/Signup'
+const SignupPage = () => {
   return (
     <div>
-      <Signup/>
+      <Signup />
     </div>
   )
 }
 
-export default SignUpPage
+export default SignupPage
