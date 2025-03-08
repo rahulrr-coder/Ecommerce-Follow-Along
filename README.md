@@ -111,6 +111,5 @@ we implemented the backend functionality to add products to the user's cart and 
 we create an frontend page UI for cart and write an endpoint to increase and decrease the quantity of product inside cart
 
 ## Milestone 20
-We implemented the frontend functionality to display the user's cart. This feature allows users to view their cart and add products to it.
-
+we will profile page frontend and write an endpoint to receive user data and display.
 
