@@ -144,5 +144,8 @@ If no addresses exist, the profile page continues to display a **"No address fou
 
 This milestone helps in understanding how to create an endpoint that stores address data and integrates it with the frontend for a seamless user experience.
 
-## Milestone 23:
+## Milestone 23
 Milestone 23 focuses on implementing the order placement flow. A "Place Order" button will be added to the cart page, which, when clicked, navigates to the "Select Address" page. This page will display all available addresses associated with the user, allowing them to choose one. A backend endpoint will be created to retrieve and send all user addresses to the frontend, ensuring seamless address selection before order confirmation.
+
+## Milestone 24
+The Order Summary page will provide users with a clear overview of their purchase before finalizing the order. It will display all the products being ordered, including their details such as name, quantity, and price. Below the product list, the selected delivery address will be shown to ensure the user reviews it before proceeding. The total cart value will also be displayed, giving a complete cost breakdown. At the bottom of the page, a "Place Order" button will be available, allowing the user to confirm and complete their purchase seamlessly.
