@@ -155,3 +155,5 @@ This endpoint allows users to place orders by sending product details, user info
 
 ## Milestone 26
 This endpoint allows retrieval of a user's order history using their email address. When a request is made, the server first searches for the user's _id based on the provided email. Once the _id is obtained, it queries the database to fetch all orders associated with that user. The response includes the complete list of orders, enabling seamless tracking of purchase history. This functionality ensures efficient data retrieval while maintaining a user-friendly experience.
+
+
