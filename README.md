@@ -32,7 +32,7 @@ Authentication ensures only the right people can access certain features. For ex
 - Users need to log in to place orders or see their personal data.
 - It keeps the app secure by verifying users' identities.
 
-# milestone 2:
+# Milestone 2:
 In the repo that I have already created for Ecommerce_follow_along I cloned and created a cra app and installed tailwindcss and I created the login page UI .
 
 ## Milestone 3:
@@ -162,5 +162,8 @@ In this Milestone, we focused on implementing the My Orders page in the e-commer
 ## Milestone 28
 Enhanced the My Orders page by adding a Cancel Order button for each active order. This button will allow users to cancel an order if it has not already been canceled. If an order is already marked as canceled, the button will not be displayed. To achieve this, a new API endpoint will be created to handle order cancellations. When a user clicks the cancel button, the order ID will be sent to this endpoint, which will retrieve the order, update its status to canceled, and save the changes. This feature improves order management and gives users more control over their purchases.
 
-##Milestone 29
+## Milestone 29
 we set up the PayPal sandbox environment for online payments. First, create a PayPal account and access the PayPal Developer Dashboard. From there, locate the sandbox accounts section, copy the UserID, and save it. Additionally, retrieve and save the client ID from the sandbox account. On the order confirmation page, implement two payment options: Cash on Delivery (COD) and online payment. Use radio buttons to toggle between these options, ensuring that the PayPal payment buttons appear when online payment is selected. In the next milestone, we will implement the functionality to display and process PayPal online payments.
+
+## Milestone 30
+we integrate PayPal online payments into our project. Using the previously created PayPal sandbox account and client ID, implement the PayPal API to enable online transactions. Install the react-paypal-js NPM package, which provides the PayPalScriptProvider component to display various payment methods, including credit and debit cards. This step will enhance your understanding of integrating online payments seamlessly into your application.
