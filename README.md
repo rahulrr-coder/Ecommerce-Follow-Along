@@ -175,4 +175,20 @@ We set up global state management in our React application using the react-redux
 we implemented global state management to handle user authentication by storing the user's email after login. When the user logs in successfully, we use the dispatch method from Redux to store their email in a global state using a slice (userSlice). This allows us to access the email across different components using the useSelector hook. By doing this, we avoid passing props manually and ensure a consistent user context throughout the application. This email is then used to filter and fetch data specific to the logged-in user in other pages, enhancing both security and user experience.
 
 ## Milestone 33
+
 To begin using JWT authentication in your Node.js application, first install the jsonwebtoken package by running npm install jsonwebtoken in your project directory. Once installed, you can use the sign method from this package to create a JWT token by passing a payload that includes the user's email and ID. To control how long the token remains valid, you can set the expiresIn property using the maxAge option, such as '1d' for one day or '3h' for three hours. After generating the token, use the res.cookie() method provided by Express to store the token in a cookie on the user's browser. For security purposes, ensure the cookie is set with httpOnly: true to prevent access from client-side scripts. Here’s an example of setting the cookie: res.cookie('token', token, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 });, where maxAge is in milliseconds. This setup helps manage user sessions securely using JWTs stored in browser cookies.
+
+## Milestone 34
+
+In Milestone 34, we implemented route protection using JWT authentication by validating the token stored in browser cookies. On each request to a protected route, the backend extracts the token from the cookies and verifies it using a middleware function. If the token is valid, the user is allowed to access the route; otherwise, an error response is returned. This middleware is applied to all sensitive routes to ensure only authenticated users can access them. On the frontend, cookies are sent automatically with each request using credentials: 'include', and users are redirected to the login page if authentication fails. This ensures that no page requiring authentication can be accessed without a valid login session.
+
+## Milestone 35
+
+In Milestone 35, we deployed both the backend and frontend of the application. The backend was deployed using a hosting service and is accessible at:
+Frontend URL: https://ecommerce-online-store-front.onrender.com
+
+This link replaced all instances of localhost in the frontend code to enable proper API communication. After that, the frontend was deployed using a deployment platform and is available at:
+Backend URL: https://ecommerce-online-store-back.onrender.com
+
+Finally, we tested both deployments to ensure they are working correctly together in the production environment, confirming successful integration and functionality.
+
